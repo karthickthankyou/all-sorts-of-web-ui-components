@@ -7,7 +7,7 @@ export interface ICardTeamSection01Props {
 const CardTeamSection01 = ({ name, role, picture }: ICardTeamSection01Props) => {
   return (
     <div>
-      <img src={picture} alt="" className="w-full h-14 object-cover rounded" />
+      <img src={picture} alt="" className="w-full h-14 object-cover rounded shadow-md" />
       <div className="font-weight-600 mt-2">
         {name}
       </div>
