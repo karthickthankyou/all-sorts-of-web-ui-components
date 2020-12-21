@@ -46,3 +46,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   transform: translateX(0.9rem);
 }
+
+.max-w-60ch {
+  max-width: 60ch;
+}
