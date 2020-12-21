@@ -1,0 +1,112 @@
+// Flex actions.
+
+@each $bp-name, $bp-size in $breakpoints {
+  @media (min-width: $bp-size) {
+    .#{$bp-name}flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .#{$bp-name}flex-grow {
+      flex-grow: 1;
+    }
+
+    .#{$bp-name}flex-row {
+      flex-direction: row;
+    }
+    .#{$bp-name}flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+    .#{$bp-name}flex-col {
+      flex-direction: column;
+    }
+    .#{$bp-name}flex-col-reverse {
+      flex-direction: column-reverse;
+    }
+
+    .#{$bp-name}justify-start {
+      justify-content: flex-start;
+    }
+    .#{$bp-name}justify-end {
+      justify-content: flex-end;
+    }
+    .#{$bp-name}justify-center {
+      justify-content: center;
+    }
+    .#{$bp-name}justify-between {
+      justify-content: space-between;
+    }
+    .#{$bp-name}justify-around {
+      justify-content: space-around;
+    }
+    .#{$bp-name}justify-evenly {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.self-auto {
+  align-self: auto;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
+}
+.self-stretch {
+  align-self: stretch;
+}
+
+.justify-self-auto {
+  justify-self: auto;
+}
+.justify-self-start {
+  justify-self: start;
+}
+.justify-self-end {
+  justify-self: end;
+}
+.justify-self-center {
+  justify-self: center;
+}
+.justify-self-stretch {
+  justify-self: stretch;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+// .justify-start {
+//   justify-content: flex-start;
+// }
+// .justify-end {
+//   justify-content: flex-end;
+// }
+// .justify-center {
+//   justify-content: center;
+// }
+// .justify-between {
+//   justify-content: space-between;
+// }
+// .justify-around {
+//   justify-content: space-around;
+// }
+// .justify-evenly {
+//   justify-content: space-evenly;
+// }

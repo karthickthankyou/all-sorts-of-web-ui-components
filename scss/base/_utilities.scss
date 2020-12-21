@@ -1,0 +1,535 @@
+// Paddings and margins
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $size in $spacing {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}p-#{$name} {
+        padding: $size;
+      }
+      .#{$bp-name}pt-#{$name} {
+        padding-top: $size;
+      }
+      .#{$bp-name}pr-#{$name} {
+        padding-right: $size;
+      }
+      .#{$bp-name}pb-#{$name} {
+        padding-bottom: $size;
+      }
+      .#{$bp-name}pl-#{$name} {
+        padding-left: $size;
+      }
+      .#{$bp-name}px-#{$name} {
+        padding-right: $size;
+        padding-left: $size;
+      }
+      .#{$bp-name}py-#{$name} {
+        padding-top: $size;
+        padding-bottom: $size;
+      }
+      .#{$bp-name}m-#{$name} {
+        margin: $size;
+      }
+      .#{$bp-name}mt-#{$name} {
+        margin-top: $size;
+      }
+      .#{$bp-name}mr-#{$name} {
+        margin-right: $size;
+      }
+      .#{$bp-name}mb-#{$name} {
+        margin-bottom: $size;
+      }
+      .#{$bp-name}ml-#{$name} {
+        margin-left: $size;
+      }
+      .#{$bp-name}mx-#{$name} {
+        margin-right: $size;
+        margin-left: $size;
+      }
+      .#{$bp-name}my-#{$name} {
+        margin-top: $size;
+        margin-bottom: $size;
+      }
+    }
+  }
+}
+
+// Negative margin
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $size in $spacing-n {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}m-n-#{$name} {
+        margin: $size;
+      }
+      .#{$bp-name}mt-n-#{$name} {
+        margin-top: $size;
+      }
+      .#{$bp-name}mr-n-#{$name} {
+        margin-right: $size;
+      }
+      .#{$bp-name}mb-n-#{$name} {
+        margin-bottom: $size;
+      }
+      .#{$bp-name}ml-n-#{$name} {
+        margin-left: $size;
+      }
+      .#{$bp-name}mx-n-#{$name} {
+        margin-right: $size;
+        margin-left: $size;
+      }
+      .#{$bp-name}my-n-#{$name} {
+        margin-top: $size;
+        margin-bottom: $size;
+      }
+    }
+  }
+}
+
+// Positions
+@each $bp-name, $bp-size in $breakpoints {
+  @each $position in $positions {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}#{$position} {
+        position: $position;
+      }
+    }
+  }
+}
+
+// display types
+@each $bp-name, $bp-size in $breakpoints {
+  @each $display in $displays {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}d-#{$display} {
+        display: $display;
+      }
+    }
+  }
+}
+
+// $opacity: (  "10": 0.1,  "20": 0.2,  "30": 0.3,  "40": 0.4,  "50": 0.5,  "60": 0.6,  "70": 0.7,  "80": 0.8,  "90": 0.9,  "100": 1,);
+// Opacity types
+@each $name, $size in $opacity {
+  .opacity-#{$name} {
+    opacity: $size;
+  }
+  .hover-opacity-#{$name} {
+    transition: opacity $transition-duration;
+    &:hover {
+      opacity: $size;
+    }
+  }
+}
+
+// heights and widths
+// $dimensions: "0_5" 0.5rem, "0_75" 0.75rem, "1" 1rem, "2" 2rem, "3" 3rem,
+//   "4" 4rem, "5" 5rem, "6" 6rem, "8" 8rem, "10" 10rem, "12" 12rem, "14" 14rem,
+//   "16" 16rem, "20" 20rem, "25" 25rem, "30" 30rem,"35" 35rem, "40" 40rem,  "45" 45rem, "50pct" 50%, "75pct" 75%, "full" 100%,
+//   "50vh" 50vh, "80vh" 80vh, "100vh" 100vh,"100vw" 100vw;
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $size in $dimensions {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}h-#{$name} {
+        height: $size;
+      }
+      .#{$bp-name}w-#{$name} {
+        width: $size;
+      }
+      .#{$bp-name}min-h-#{$name} {
+        min-height: $size;
+      }
+      .#{$bp-name}min-w-#{$name} {
+        min-width: $size;
+      }
+      .#{$bp-name}max-h-#{$name} {
+        max-height: $size;
+      }
+      .#{$bp-name}max-w-#{$name} {
+        max-width: $size;
+      }
+    }
+  }
+}
+
+// z-indices
+// $z-indices: "dropdown" 1000, "appbar" 1100, "drawer" 1200, "modal" 1300,
+//   "snackbar" 1400, "tooltip" 1500;
+@each $name, $size in $z-indices {
+  .z-#{$name} {
+    z-index: $size;
+  }
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.rounded-sm {
+  border-radius: $rounded-border-radius-sm;
+}
+
+.rounded {
+  border-radius: $rounded-border-radius-md;
+}
+
+.rounded-lg {
+  border-radius: $rounded-border-radius-lg;
+}
+
+.rounded-circle {
+  border-radius: $rounded-border-radius-circle;
+}
+
+.hover-scale {
+  transition: all 0.25s;
+  &:hover {
+    transform: scale(1.5);
+    @extend .shadow-lg;
+    border: 2px solid black;
+  }
+}
+
+.b-grey-500 {
+  border: 1px solid #ccc;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.top-50pct {
+  top: 50%;
+}
+
+.right-50pct {
+  right: 50%;
+}
+
+.bottom-50pct {
+  bottom: 50%;
+}
+
+.left-50pct {
+  left: 50%;
+}
+.top-full {
+  top: 100%;
+}
+
+.top-5 {
+  top: 5rem;
+}
+
+.right-full {
+  right: 100%;
+}
+
+.bottom-full {
+  bottom: 100%;
+}
+
+.left-full {
+  left: 100%;
+}
+
+.translate-50-50 {
+  transform: translate(-50%, -50%);
+}
+
+.translate-2-2 {
+  transform: translate(2rem, 2rem);
+}
+.translate-2n-2n {
+  transform: translate(-2rem, -2rem);
+}
+.translate-2-2n {
+  transform: translate(2rem, -2rem);
+}
+.translate-2n-2 {
+  transform: translate(-2rem, 2rem);
+}
+
+.self-center {
+  transform: translate(50%, -50%);
+}
+
+.cursor-auto {
+  cursor: auto;
+}
+.cursor-default {
+  cursor: default;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-wait {
+  cursor: wait;
+}
+.cursor-text {
+  cursor: text;
+}
+.cursor-move {
+  cursor: move;
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.hover-parent-focus {
+  .hover-child-open {
+    display: none;
+  }
+  &:focus,
+  &:focus-within {
+    .hover-child-open {
+      display: block;
+    }
+  }
+}
+
+.hover-parent-focus-1 {
+  .hover-child-open-1 {
+    display: none;
+  }
+  &:focus,
+  &:focus-within {
+    .hover-child-open-1 {
+      display: block;
+    }
+  }
+}
+
+.hover-parent {
+  .hover-child-appear {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transition-duration;
+  }
+  .hover-child-disappear {
+    opacity: 1;
+    transition: opacity $transition-duration;
+  }
+
+  .hover-child-text-primary-500 {
+    color: inherit;
+  }
+  .hover-child-scale {
+    transform: scale(1);
+    transition: transform $transition-duration;
+  }
+  .hover-child-drop {
+    display: none;
+    transition: 0s background-color;
+  }
+  &:focus,
+  &:focus-within,
+  &:active,
+  &:target,
+  &:hover {
+    .hover-child-appear {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    .hover-child-text-primary-500 {
+      color: $primary-500;
+    }
+    .hover-child-disappear {
+      opacity: 0;
+    }
+    .hover-child-scale {
+      transform: scale(1.08);
+    }
+    .hover-child-drop {
+      display: block;
+      top: 4rem;
+      left: 0;
+      width: 100%;
+      transition-delay: 1s;
+    }
+  }
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-visible {
+  overflow: visible;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-x-visible {
+  overflow-x: visible;
+}
+.overflow-y-visible {
+  overflow-y: visible;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.gradient-to-top {
+  background: linear-gradient(to top, $black-opacity-50, transparent);
+}
+
+.gradient-to-bottom {
+  background: linear-gradient(to top, transparent, $black-opacity-50);
+}
+
+//map-get($map: $colors, $key: "grey-900");
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.border {
+  border: solid 1px $grey-200;
+}
+
+.border-left-thick {
+  border-left: 0.5rem solid;
+}
+
+.border-primary-500 {
+  border: solid 1px $primary-500;
+}
+.border-bottom {
+  border-bottom: solid 1px $grey-200;
+}
+.border-right {
+  border-right: solid 1px $grey-200;
+}
+.border-top {
+  border-top: solid 1px $grey-200;
+}
+.border-bottom-grey-100 {
+  border-bottom: solid 1px $grey-100;
+}
+
+.border-none {
+  border: none;
+}
+
+// Container
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @each $bp-name, $bp-size in $breakpoints {
+    @if $bp-size>0 {
+      @media (min-width: $bp-size) {
+        max-width: $bp-size;
+      }
+    }
+  }
+}
+
+.hover-bg-primary-500 {
+  &:hover {
+    background-color: $primary-500;
+  }
+}
+
+.hover-text-primary-500 {
+  &:hover {
+    color: $primary-500;
+  }
+}
+
+.hover-bg-grey-100 {
+  &:hover {
+    background-color: $grey-100;
+  }
+}
+
+.hover-text-black {
+  &:hover {
+    color: $black;
+  }
+}
+
+.fill-primary-500 {
+  fill: $primary-500;
+}
+
+.no-focus-outline {
+  &:focus {
+    outline: none;
+    box-shadow: 1px 1px 0px $primary-500, 1px -1px 0px $primary-500, -1px 1px 0px $primary-500,
+      -1px -1px 0px $primary-500;
+  }
+}
+
+.zebra-dl {
+  dl:nth-child(odd) {
+    background-color: $grey-100;
+  }
+  dl:nth-child(even) {
+    background-color: $white;
+  }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @media (min-width: $bp-size) {
+    .#{$bp-name}divider-y {
+      > :not(:last-child) {
+        border-bottom: 2px solid $grey-100;
+      }
+    }
+    .#{$bp-name}divider-y-none {
+      > :not(:last-child) {
+        border-bottom: none;
+      }
+    }
+
+    .#{$bp-name}divider-x {
+      > :not(:last-child) {
+        border-right: 2px solid $grey-200;
+      }
+    }
+    .#{$bp-name}divider-x-none {
+      > :not(:last-child) {
+        border-right: none;
+      }
+    }
+  }
+}

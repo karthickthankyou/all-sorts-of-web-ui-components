@@ -1,0 +1,51 @@
+@each $bp-name, $bp-size in $breakpoints {
+  @for $i from 1 through 12 {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}grid-cols-#{$i} {
+        grid-template-columns: repeat($i, minmax(0, 1fr));
+      }
+      .#{$bp-name}grid-rows-#{$i} {
+        grid-template-rows: repeat($i, minmax(0, 1fr));
+      }
+      .#{$bp-name}col-span-#{$i} {
+        grid-column: span $i / span $i;
+      }
+      .#{$bp-name}row-span-#{$i} {
+        grid-row: span $i / span $i;
+      }
+      .#{$bp-name}order-#{$i} {
+        order: $i;
+      }
+    }
+  }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @for $i from 0 through 12 {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}order-#{$i} {
+        order: $i;
+      }
+    }
+  }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $size in $grid-gaps {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}gap-#{$name} {
+        gap: $size;
+      }
+    }
+  }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $size in $auto-cols {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}auto-col-#{$name} {
+        grid-template-columns: repeat(auto-fit, minmax(#{$size}, 1fr));
+      }
+    }
+  }
+}

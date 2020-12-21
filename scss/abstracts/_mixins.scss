@@ -1,0 +1,22 @@
+@mixin media-breakpoint-up($breakpoint) {
+    @if $breakpoint == sm {
+        @media (min-width: 37.5em) {
+            @content;
+        } //600px
+    }
+    @if $breakpoint == md {
+        @media (min-width: 56.25em) {
+            @content;
+        } //900px
+    }
+    @if $breakpoint == lg {
+        @media (min-width: 75em) {
+            @content;
+        } //1200px
+    }
+    @if $breakpoint == xl {
+        @media (min-width: 112.5em) {
+            @content;
+        } //1800
+    }
+}

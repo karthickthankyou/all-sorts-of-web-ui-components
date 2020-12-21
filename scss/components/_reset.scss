@@ -1,0 +1,13 @@
+button {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: $text-sm;
+    white-space: nowrap;
+}
+
+input {
+    padding: $spacing-2 $spacing-2;
+    border: 1px solid $grey-300;
+    border-radius: $rounded-border-radius-sm;
+}

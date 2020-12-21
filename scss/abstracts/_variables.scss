@@ -1,0 +1,291 @@
+// $0rem: 0rem;
+// $0_25rem: 0.25rem;
+// $0_5rem: 0.5rem;
+// $0_75rem: 0.75rem;
+// $1rem: 1rem;
+
+$breakpoints: "" 0px, "xs-" 576px, "sm-" 768px, "md-" 992px, "lg-" 1200px, "xl-" 1400px;
+
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 2rem;
+$text-4xl: 2.5rem;
+$text-5xl: 3rem;
+$text-6xl: 4rem;
+$text-7xl: 5rem;
+$text-8xl: 6rem;
+$text-9xl: 8rem;
+
+$lh-font-size: 1;
+$lh-0_5: 0.5rem;
+$lh-1: 1rem;
+$lh-1_5: 1.5rem;
+$lh-2: 2rem;
+$lh-2_5: 2.5rem;
+$lh-3: 3rem;
+$lh-3_5: 3.5rem;
+$lh-4: 4rem;
+$lh-5: 5rem;
+$lh-6: 6rem;
+$lh-7: 7rem;
+$lh-8: 8rem;
+$lh-9: 9rem;
+
+$text-sizes: "text-xs" $text-xs lh-1, "text-sm" $text-sm lh-1, "text-base" $text-base lh-1_5, "text-lg" $text-lg lh-1_5,
+  "text-xl" $text-xl lh-1_5, "text-2xl" $text-2xl $lh-font-size, "text-3xl" $text-3xl $lh-font-size,
+  "text-4xl" $text-4xl $lh-font-size, "text-5xl" $text-5xl $lh-font-size, "text-6xl" $text-6xl $lh-font-size,
+  "text-7xl" $text-7xl $lh-font-size, "text-8xl" $text-8xl $lh-font-size, "text-9xl" $text-9xl $lh-font-size;
+
+$line-heights: (
+  "lh-font-size": $lh-font-size,
+  "lh-0_5": $lh-0_5,
+  "lh-1": $lh-1,
+  "lh-1_5": $lh-1_5,
+  "lh-2": $lh-2,
+  "lh-2_5": $lh-2_5,
+  "lh-3": $lh-3,
+  "lh-3_5": $lh-3_5,
+  "lh-4": $lh-4,
+  "lh-5": $lh-5,
+  "lh-6": $lh-6,
+  "lh-7": $lh-7,
+  "lh-8": $lh-8,
+  "lh-9": $lh-9,
+);
+
+// $line-heights: "0_5" 0.5rem, "1" 1rem, "1_5" 1.5rem, "2" 2rem, "2_5" 2.5rem,
+//   "3" 3rem, "3_5" 3.5rem, "4" 4rem;
+
+$spacing-0: 0rem;
+$spacing-0_5: 0.125rem;
+$spacing-1: 0.25rem;
+$spacing-1_5: 0.375rem;
+$spacing-2: 0.5rem;
+$spacing-2_5: 0.75rem;
+$spacing-3: 1rem;
+$spacing-3_5: 1.5rem;
+$spacing-4: 2rem;
+$spacing-5: 3rem;
+$spacing-6: 4rem;
+$spacing-auto: auto;
+
+$spacing-n-0: -0rem;
+$spacing-n-0_5: -0.125rem;
+$spacing-n-1: -0.25rem;
+$spacing-n-1_5: -0.375rem;
+$spacing-n-2: -0.5rem;
+$spacing-n-2_5: -0.75rem;
+$spacing-n-3: -1rem;
+$spacing-n-3_5: -1.5rem;
+$spacing-n-4: -2rem;
+$spacing-n-5: -3rem;
+$spacing-n-6: -4rem;
+
+$spacing: "0" $spacing-0, "0_5" $spacing-0_5, "1" $spacing-1, "1_5" $spacing-1_5, "2" $spacing-2, "2_5" $spacing-2_5,
+  "3" $spacing-3, "4" $spacing-4, "5" $spacing-5, "6" $spacing-6, "50pct" 50%, "66pct" 66.66%, "75pct" 75%, "auto" auto;
+
+$spacing-n: "0" $spacing-n-0, "0_5" $spacing-n-0_5, "1" $spacing-n-1, "1_5" $spacing-n-1_5, "2" $spacing-n-2,
+  "2_5" $spacing-n-2_5, "3" $spacing-n-3, "4" $spacing-n-4, "5" $spacing-n-5, "6" $spacing-n-6;
+
+$font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+$hundred-increments: 0, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+$primary-900: hsl(245, 58%, 2%);
+$primary-800: hsl(245, 58%, 15%);
+$primary-700: hsl(245, 58%, 30%);
+$primary-600: hsl(245, 58%, 42%);
+$primary-500: hsl(245, 58%, 54%);
+$primary-400: hsl(245, 58%, 68%);
+$primary-300: hsl(245, 58%, 78%);
+$primary-200: hsl(245, 58%, 90%);
+$primary-100: hsl(245, 58%, 98%);
+$secondary-900: hsl(132, 77%, 5%);
+$secondary-800: hsl(132, 77%, 13%);
+$secondary-700: hsl(132, 77%, 22%);
+$secondary-600: hsl(132, 77%, 31%);
+$secondary-500: hsl(132, 77%, 39%);
+$secondary-400: hsl(132, 77%, 50%);
+$secondary-300: hsl(132, 77%, 63%);
+$secondary-200: hsl(132, 77%, 80%);
+$secondary-100: hsl(132, 77%, 95%);
+$red-900: hsl(5, 100%, 3%);
+$red-800: hsl(5, 100%, 10%);
+$red-700: hsl(5, 100%, 22%);
+$red-600: hsl(5, 100%, 35%);
+$red-500: hsl(5, 100%, 50%);
+$red-400: hsl(5, 100%, 65%);
+$red-300: hsl(5, 100%, 78%);
+$red-200: hsl(5, 100%, 90%);
+$red-100: hsl(5, 100%, 97%);
+$green-900: hsl(150, 100%, 5%);
+$green-800: hsl(150, 100%, 15%);
+$green-700: hsl(150, 100%, 24%);
+$green-600: hsl(150, 100%, 30%);
+$green-500: hsl(150, 100%, 40%);
+$green-400: hsl(150, 100%, 55%);
+$green-300: hsl(150, 100%, 70%);
+$green-200: hsl(150, 100%, 85%);
+$green-100: hsl(150, 100%, 95%);
+$yellow-900: hsl(30, 65%, 3%);
+$yellow-800: hsl(30, 65%, 10%);
+$yellow-700: hsl(29, 65%, 18%);
+$yellow-600: hsl(28, 75%, 28%);
+$yellow-500: hsl(33, 85%, 38%);
+$yellow-400: hsl(28, 72%, 45%);
+$yellow-300: hsl(29, 67%, 60%);
+$yellow-200: hsl(30, 67%, 80%);
+$yellow-100: hsl(30, 67%, 97%);
+$grey-900: hsl(215, 0%, 5%);
+$grey-800: hsl(215, 0%, 15%);
+$grey-700: hsl(215, 0%, 25%);
+$grey-600: hsl(215, 0%, 35%);
+$grey-500: hsl(215, 0%, 46%);
+$grey-400: hsl(215, 0%, 65%);
+$grey-300: hsl(215, 0%, 78%);
+$grey-200: hsl(215, 0%, 90%);
+$grey-100: hsl(215, 0%, 97%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$white-opacity-90: hsla(0, 0%, 100%, 0.9);
+$white-opacity-80: hsla(0, 0%, 100%, 0.8);
+$white-opacity-70: hsla(0, 0%, 100%, 0.7);
+$white-opacity-60: hsla(0, 0%, 100%, 0.6);
+$white-opacity-50: hsla(0, 0%, 100%, 0.5);
+$white-opacity-40: hsla(0, 0%, 100%, 0.4);
+$white-opacity-30: hsla(0, 0%, 100%, 0.3);
+$white-opacity-20: hsla(0, 0%, 100%, 0.2);
+$white-opacity-10: hsla(0, 0%, 100%, 0.2);
+$black-opacity-90: hsla(0, 0%, 0%, 0.9);
+$black-opacity-80: hsla(0, 0%, 0%, 0.8);
+$black-opacity-70: hsla(0, 0%, 0%, 0.7);
+$black-opacity-60: hsla(0, 0%, 0%, 0.6);
+$black-opacity-50: hsla(0, 0%, 0%, 0.5);
+$black-opacity-40: hsla(0, 0%, 0%, 0.4);
+$black-opacity-30: hsla(0, 0%, 0%, 0.3);
+$black-opacity-20: hsla(0, 0%, 0%, 0.2);
+$black-opacity-10: hsla(0, 0%, 0%, 0.1);
+
+$colors: (
+  "primary-900": $primary-900,
+  "primary-800": $primary-800,
+  "primary-700": $primary-700,
+  "primary-600": $primary-600,
+  "primary-500": $primary-500,
+  "primary-400": $primary-400,
+  "primary-300": $primary-300,
+  "primary-200": $primary-200,
+  "primary-100": $primary-100,
+  "secondary-900": $secondary-900,
+  "secondary-800": $secondary-800,
+  "secondary-700": $secondary-700,
+  "secondary-600": $secondary-600,
+  "secondary-500": $secondary-500,
+  "secondary-400": $secondary-400,
+  "secondary-300": $secondary-300,
+  "secondary-200": $secondary-200,
+  "secondary-100": $secondary-100,
+  "red-900": $red-900,
+  "red-800": $red-800,
+  "red-700": $red-700,
+  "red-600": $red-600,
+  "red-500": $red-500,
+  "red-400": $red-400,
+  "red-300": $red-300,
+  "red-200": $red-200,
+  "red-100": $red-100,
+  "green-900": $green-900,
+  "green-800": $green-800,
+  "green-700": $green-700,
+  "green-600": $green-600,
+  "green-500": $green-500,
+  "green-400": $green-400,
+  "green-300": $green-300,
+  "green-200": $green-200,
+  "green-100": $green-100,
+  "yellow-900": $yellow-900,
+  "yellow-800": $yellow-800,
+  "yellow-700": $yellow-700,
+  "yellow-600": $yellow-600,
+  "yellow-500": $yellow-500,
+  "yellow-400": $yellow-400,
+  "yellow-300": $yellow-300,
+  "yellow-200": $yellow-200,
+  "yellow-100": $yellow-100,
+  "grey-900": $grey-900,
+  "grey-800": $grey-800,
+  "grey-700": $grey-700,
+  "grey-600": $grey-600,
+  "grey-500": $grey-500,
+  "grey-400": $grey-400,
+  "grey-300": $grey-300,
+  "grey-200": $grey-200,
+  "grey-100": $grey-100,
+  "white": $white,
+  "black": $black,
+  "white-opacity-90": $white-opacity-90,
+  "white-opacity-80": $white-opacity-80,
+  "white-opacity-70": $white-opacity-70,
+  "white-opacity-60": $white-opacity-60,
+  "white-opacity-50": $white-opacity-50,
+  "white-opacity-40": $white-opacity-40,
+  "white-opacity-30": $white-opacity-30,
+  "white-opacity-20": $white-opacity-20,
+  "white-opacity-10": $white-opacity-10,
+  "black-opacity-90": $black-opacity-90,
+  "black-opacity-80": $black-opacity-80,
+  "black-opacity-70": $black-opacity-70,
+  "black-opacity-60": $black-opacity-60,
+  "black-opacity-50": $black-opacity-50,
+  "black-opacity-40": $black-opacity-40,
+  "black-opacity-30": $black-opacity-30,
+  "black-opacity-20": $black-opacity-20,
+  "black-opacity-10": $black-opacity-10,
+);
+
+$positions: static, fixed, absolute, relative, sticky;
+
+$displays: inline, inline-block, block, flex, grid, none;
+
+$z-indices: "bg" -1000, "dropdown" 1000, "appbar" 1100, "drawer" 1200, "modal" 1300, "snackbar" 1400, "tooltip" 1500;
+
+$dimensions: "0_125" 0.125rem, "0_25" 0.25rem, "0_5" 0.5rem, "0_75" 0.75rem, "1" 1rem, "2" 2rem, "3" 3rem, "4" 4rem,
+  "5" 5rem, "6" 6rem, "8" 8rem, "10" 10rem, "12" 12rem, "14" 14rem, "16" 16rem, "20" 20rem, "25" 25rem, "30" 30rem,
+  "35" 35rem, "40" 40rem, "45" 45rem, "50" 50rem, "50pct" 50%, "75pct" 75%, "full" 100%, "50vh" 50vh, "80vh" 80vh,
+  "100vh" 100vh, "100vw" 100vw;
+
+$grids: 12;
+$grid-gaps: "0" 0rem, "0_25" 0.25rem, "0_5" 0.5rem, "0_75" 0.75rem, "1" 1rem, "1_5" 1.5rem, "2" 2rem, "3" 3rem;
+
+$auto-cols: "5" 5rem, "10" 10rem, "15" 15rem, "20" 20rem;
+
+$rounded-border-radius-sm: 0.125rem;
+$rounded-border-radius-md: 0.25rem;
+$rounded-border-radius-lg: 0.5rem;
+$rounded-border-radius-circle: 99rem;
+
+$transition-duration: 0.25s;
+
+$opacity: (
+  "10": 0.1,
+  "20": 0.2,
+  "30": 0.3,
+  "40": 0.4,
+  "50": 0.5,
+  "60": 0.6,
+  "70": 0.7,
+  "80": 0.8,
+  "90": 0.9,
+  "100": 1,
+);
+
+$shadows: "0" none, "xs" 0px 2px 4px hsla(0, 0%, 0%, 0.12),
+  "sm" (0px 2px 2px hsla(0, 0%, 0%, 0.12), 0px 4px 4px hsla(0, 0%, 0%, 0.12)),
+  "md" (0px 3px 3px hsla(0, 0%, 0%, 0.12), 0px 6px 8px hsla(0, 0%, 0%, 0.12)),
+  "lg" (0px 4px 4px hsla(0, 0%, 0%, 0.12), 0px 8px 10px hsla(0, 0%, 0%, 0.12)),
+  "xl" (0px 5px 5px hsla(0, 0%, 0%, 0.12), 0px 10px 12px hsla(0, 0%, 0%, 0.12));
+
+$text-alignments: left, right, center, justify;

@@ -1,0 +1,108 @@
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $font-size, $line-height in $text-sizes {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}#{$name} {
+        font-size: $font-size;
+        line-height: $line-height;
+      }
+    }
+  }
+}
+
+// $text-alignments: "left", "right", "center", "justify";
+@each $bp-name, $bp-size in $breakpoints {
+  @each $value in $text-alignments {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}text-#{$value} {
+        text-align: $value;
+      }
+    }
+  }
+}
+
+// $line-heights: "0_5" 0.5rem, "1" 1rem, "1_5" 1.5rem, "2" 2rem, "2_5" 2.5rem,
+//   "3" 3rem, "3_5" 3.5rem, "4" 4rem;
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $size in $line-heights {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}#{$name} {
+        line-height: $size;
+      }
+    }
+  }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @each $weight in $font-weights {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}font-weight-#{$weight} {
+        font-weight: $weight;
+      }
+    }
+  }
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @each $color-name, $color in $colors {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}text-#{$color-name} {
+        color: $color;
+      }
+      .#{$bp-name}bg-#{$color-name} {
+        background-color: $color;
+      }
+      .#{$bp-name}hover-text-#{$color-name} {
+        &:hover {
+          color: $color;
+        }
+      }
+      .#{$bp-name}hover-bg-#{$color-name} {
+        &:hover {
+          background-color: $color;
+        }
+      }
+    }
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.normal-case {
+  text-transform: none;
+}
+
+.line-height-1 {
+  line-height: 1;
+}
+
+.text-outline-black {
+  text-shadow: -1px -1px 0 hsla(0, 0, 0, 0.2), 1px -1px 0 hsla(0, 0, 0, 0.2), -1px 1px 0 hsla(0, 0, 0, 0.2),
+    1px 1px 0 hsla(0, 0, 0, 0.2);
+}
+
+.text-outline-white {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+.letter-spacing-0_5 {
+  letter-spacing: 0.5px;
+}
+
+.letter-spacing-n1 {
+  letter-spacing: -1px;
+}
+
+.letter-spacing-n0_5 {
+  letter-spacing: -0.5px;
+}
