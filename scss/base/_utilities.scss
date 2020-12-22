@@ -508,11 +508,20 @@
   }
 }
 
+.zebra-dl-primary-100 {
+  dl:nth-child(odd) {
+    background-color: $primary-100;
+  }
+  dl:nth-child(even) {
+    background-color: $white;
+  }
+}
+
 @each $bp-name, $bp-size in $breakpoints {
   @media (min-width: $bp-size) {
     .#{$bp-name}divider-y {
       > :not(:last-child) {
-        border-bottom: 2px solid $grey-100;
+        border-bottom: 1px solid $grey-200;
       }
     }
     .#{$bp-name}divider-y-none {
@@ -523,7 +532,7 @@
 
     .#{$bp-name}divider-x {
       > :not(:last-child) {
-        border-right: 2px solid $grey-200;
+        border-right: 1px solid $grey-200;
       }
     }
     .#{$bp-name}divider-x-none {
