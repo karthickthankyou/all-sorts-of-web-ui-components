@@ -54,7 +54,7 @@ const DescriptionList01 = ({ }: IDescriptionList01Props) => {
                 ["resume_back_end_developer.pdf", "coverletter_back_end_developer.pdf"].map(filename => {
                   return (
                     <div className="sm-d-flex p-2 items-center">
-                      <i className="fas fa-paperclip mr-2" />
+                      <i className="fas fa-paperclip mr-2 text-grey-400" />
                       <div className="text-grey-600 break-word">
                         {filename}
                       </div>
