@@ -11,3 +11,9 @@ input {
     border: 1px solid $grey-300;
     border-radius: $rounded-border-radius-sm;
 }
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: $grey-200;
+}
