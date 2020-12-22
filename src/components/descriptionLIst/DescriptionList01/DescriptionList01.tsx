@@ -1,5 +1,8 @@
 import React from 'react';
-export interface IDescriptionList01Props { }
+import classNames from 'classnames'
+export interface IDescriptionList01Props {
+  variant: 'zebra' | 'divider'
+}
 
 const applicationData = [
   {
@@ -24,7 +27,7 @@ const applicationData = [
   },
 ]
 
-const DescriptionList01 = ({ }: IDescriptionList01Props) => {
+const DescriptionList01 = ({ variant }: IDescriptionList01Props) => {
   return (
     <div className="text-grey-800 bg-grey-100 p-4">
       <div className="rounded overflow-hidden shadow-md">
@@ -36,7 +39,7 @@ const DescriptionList01 = ({ }: IDescriptionList01Props) => {
             Personal details and application.
         </div>
         </div>
-        <div className="zebra-dl-primary-100">
+        <div className={classNames({ "divider-y bg-white": variant === "divider", "zebra-dl-primary-100": variant === "zebra", })}>
           {
             applicationData.map(({ key, value }) => {
               return (
