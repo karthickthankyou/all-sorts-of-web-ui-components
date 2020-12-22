@@ -11,13 +11,27 @@ export interface ICardBlogSection01Props {
   readDuration: string
 }
 
+const BlogBadge = ({ blogType }: { blogType: 'Article' | 'Video' | 'Case Study' }) => {
+  let colorClasses = ""
+  if (blogType === "Article") {
+    colorClasses = "bg-primary-200 text-primary-600"
+  } else if (blogType === "Video") {
+    colorClasses = "bg-red-200 text-red-600"
+  } else if (blogType === "Case Study") {
+    colorClasses = "bg-green-200 text-green-700"
+  }
+  return (
+    <span className={`text-sm px-2 ${colorClasses} rounded-circle`}>
+      {blogType}
+    </span>
+  )
+}
+
 const CardBlogSection01 = ({ blogType, title, desc, author, date, readDuration }: ICardBlogSection01Props) => {
   return (
     <div>
       <div>
-        <span className="text-sm px-2 bg-primary-200 text-primary-600 rounded-circle">
-          {blogType}
-        </span>
+        <BlogBadge blogType={blogType} />
       </div>
       <div className="text-xl font-weight-600 mt-2">
         {title}

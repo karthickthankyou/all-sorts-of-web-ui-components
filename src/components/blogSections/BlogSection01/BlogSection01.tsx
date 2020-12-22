@@ -5,7 +5,7 @@ export interface IBlogSection01Props { }
 
 const BlogSection01 = ({ }: IBlogSection01Props) => {
   return (
-    <div>
+    <div className="text-grey-800">
       <div className="text-3xl font-weight-600">
         Recent Publications
       </div>
@@ -41,7 +41,7 @@ const BlogSection01 = ({ }: IBlogSection01Props) => {
             avatar: picture,
             name: 'Paul York'
           }}
-          blogType="Article"
+          blogType="Case Study"
           date="Mar 16, 2020"
           desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis sit recusandae reprehenderit velit, rem repudiandae eaque?"
           readDuration="6 min read"
