@@ -1,8 +1,6 @@
 import React from 'react';
 import classNames from 'classnames'
-export interface IDescriptionList01Props {
-  variant: 'zebra' | 'divider'
-}
+export interface IDescriptionList02Props { }
 
 const applicationData = [
   {
@@ -27,7 +25,7 @@ const applicationData = [
   },
 ]
 
-const DescriptionList01 = ({ variant }: IDescriptionList01Props) => {
+const DescriptionList02 = ({ }: IDescriptionList02Props) => {
   return (
     <div className="text-grey-800 bg-grey-100 p-4">
       <div className="rounded overflow-hidden shadow-md">
@@ -39,13 +37,16 @@ const DescriptionList01 = ({ variant }: IDescriptionList01Props) => {
             Personal details and application.
         </div>
         </div>
-        <div className={classNames({ "divider-y bg-white": variant === "divider", "zebra-dl-primary-100": variant === "zebra", })}>
+        <div className="divider-y bg-white">
           {
             applicationData.map(({ key, value }) => {
               return (
                 <dl className="d-grid grid-cols-3 p-3">
                   <dt className="col-span-3 sm-col-span-1 text-grey-600">{key}</dt>
-                  <dd className="col-span-3 sm-col-span-2 mt-1 sm-mt-0">{value}</dd>
+                  <dd className="col-span-3 sm-col-span-2 mt-1 sm-mt-0 xs-d-flex justify-between">
+                    <div>{value}</div>
+                    <button className="p-0 text-primary-400 hover-text-primary-500 mt-2 xs-ml-2 xs-mt-0">Update</button>
+                  </dd>
                 </dl>
               )
             })
@@ -61,9 +62,14 @@ const DescriptionList01 = ({ variant }: IDescriptionList01Props) => {
                       <div className="text-grey-600 break-word">
                         {filename}
                       </div>
-                      <button className="p-0 ml-auto text-primary-400 font-weight-600 mt-2">
-                        Download
-                    </button>
+                      <div className="divider-x ml-auto">
+                        <button className="p-0 pr-2 rounded-0 mt-2 hover-text-primary-500 text-primary-400">
+                          Update
+                        </button>
+                        <button className="p-0 pl-2 rounded-0 mt-2 hover-text-primary-500 text-primary-400">
+                          Remove
+                        </button>
+                      </div>
                     </div>)
                 })
               }
@@ -75,4 +81,4 @@ const DescriptionList01 = ({ variant }: IDescriptionList01Props) => {
   );
 };
 
-export default DescriptionList01;
+export default DescriptionList02;

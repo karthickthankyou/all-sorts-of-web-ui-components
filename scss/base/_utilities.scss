@@ -162,6 +162,10 @@
   object-fit: cover;
 }
 
+.rounded-0 {
+  border-radius: 0;
+}
+
 .rounded-sm {
   border-radius: $rounded-border-radius-sm;
 }
@@ -418,6 +422,8 @@
 
 .break-word {
   word-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
 }
 
 .border {
