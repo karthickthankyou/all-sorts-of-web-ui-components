@@ -9,7 +9,12 @@ button {
 input {
     padding: $spacing-2 $spacing-2;
     border: 1px solid $grey-300;
-    border-radius: $rounded-border-radius-sm;
+    border-radius: $rounded-border-radius-md;
+}
+
+button {
+    padding: $spacing-2 $spacing-3;
+    border-radius: $rounded-border-radius-md;
 }
 
 hr {
