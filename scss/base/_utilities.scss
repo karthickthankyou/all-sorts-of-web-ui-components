@@ -514,6 +514,15 @@
   }
 }
 
+.zebra-tr {
+  tr:nth-child(odd) {
+    background-color: $white;
+  }
+  tr:nth-child(even) {
+    background-color: $grey-100;
+  }
+}
+
 .zebra-dl-primary-100 {
   dl:nth-child(odd) {
     background-color: $primary-100;
