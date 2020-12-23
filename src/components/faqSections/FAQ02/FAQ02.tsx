@@ -1,13 +1,13 @@
-export interface IFAQ02Props { }
+import { ReactNode } from 'react'
+export interface IFAQ02Props {
+  faqData: {
+    id: string;
+    title: string | ReactNode;
+    content: string | ReactNode
+  }[]
+}
 
-const accordionData = [
-  { id: '1', title: "Ipsum dolor sit amet consectetur 1", content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, magni! Numquam provident veritatis eveniet maxime!' },
-  { id: '2', title: "Lorem ipsum dolor amet consectetur 2", content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, magni! Numquam provident veritatis eveniet maxime!' },
-  { id: '3', title: "Lorem ipsum sit amet 3", content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, magni! Numquam provident veritatis eveniet maxime!' },
-  { id: '4', title: "Lorem dolor sit amet consectetur 4", content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, magni! Numquam provident veritatis eveniet maxime!' },
-]
-
-const FAQ02 = ({ }: IFAQ02Props) => {
+const FAQ02 = ({ faqData }: IFAQ02Props) => {
   return (
     <div className="d-grid grid-cols-1 sm-grid-cols-3 gap-2 text-grey-800">
       <div>
@@ -21,7 +21,7 @@ const FAQ02 = ({ }: IFAQ02Props) => {
       </div>
       <div className="col-span-2">
         {
-          accordionData.map(({ id, title, content }) => {
+          faqData.map(({ id, title, content }) => {
             return (
               <div className="mb-4">
                 <div className="text-xl font-weight-600">
@@ -34,7 +34,6 @@ const FAQ02 = ({ }: IFAQ02Props) => {
             )
           })
         }
-
       </div>
     </div>
   );
