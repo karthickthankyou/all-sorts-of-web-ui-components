@@ -85,3 +85,17 @@ input:checked + .slider:before {
     }
   }
 }
+
+.clip-path-trapezoid-1 {
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@each $bp-name, $bp-size in $breakpoints {
+  @each $blur-name, $blur-value in $blur-values {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}blur-#{$blur-name} {
+        filter: blur($blur-value);
+      }
+    }
+  }
+}
