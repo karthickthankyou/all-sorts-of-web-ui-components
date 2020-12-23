@@ -18,7 +18,7 @@ const Advanced = ({ employeeData }: IAdvancedProps) => {
     <div className="rounded shadow-md overflow-hidden overflow-x-auto">
       <table className="w-full text-left">
         <thead className="bg-primary-100 border-bottom">
-          <tr>
+          <tr className="letter-spacing-1">
             <th className="font-weight-400 uppercase p-3 text-grey-600 text-sm">Name</th>
             <th className="font-weight-400 uppercase p-3 text-grey-600 text-sm">Title</th>
             <th className="font-weight-400 uppercase p-3 text-grey-600 text-sm">Status</th>
