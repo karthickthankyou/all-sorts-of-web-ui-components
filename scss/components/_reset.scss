@@ -1,19 +1,27 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
 button {
     cursor: pointer;
     border: none;
     background-color: inherit;
     font-size: $text-sm;
     white-space: nowrap;
+    padding: $spacing-2 $spacing-3;
+    border-radius: $rounded-border-radius-md;
 }
 
 input {
     padding: $spacing-2 $spacing-2;
     border: 1px solid $grey-300;
-    border-radius: $rounded-border-radius-md;
-}
-
-button {
-    padding: $spacing-2 $spacing-3;
     border-radius: $rounded-border-radius-md;
 }
 

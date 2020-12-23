@@ -2,69 +2,16 @@
   .shadow-#{$name} {
     box-shadow: #{$value};
   }
-}
-
-// .shadow-0 {
-//   box-shadow: none;
-// }
-
-// .shadow-xs {
-//   box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.12);
-// }
-
-// .shadow-sm {
-//   box-shadow: (0px 2px 2px hsla(0, 0%, 0%, 0.12), 0px 4px 4px hsla(0, 0%, 0%, 0.12));
-// }
-
-// .shadow-md {
-//   box-shadow: (0px 3px 3px hsla(0, 0%, 0%, 0.12), 0px 4px 6px hsla(0, 0%, 0%, 0.12));
-// }
-
-// .shadow-lg {
-//   box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.12), 0px 6px 8px hsla(0, 0%, 0%, 0.12);
-// }
-
-// .shadow-lg-inset {
-//   box-shadow: inset 0px 4px 4px hsla(0, 0%, 0%, 0.12), inset 0px 6px 8px hsla(0, 0%, 0%, 0.12);
-// }
-
-// .shadow-xl {
-//   box-shadow: 0px 6px 6px hsla(0, 0%, 0%, 0.12), 0px 10px 12px hsla(0, 0%, 0%, 0.12);
-// }
-
-.shadow-xl-inset {
-  box-shadow: inset 0px 6px 6px hsla(0, 0%, 0%, 0.12), inset 0px 10px 12px hsla(0, 0%, 0%, 0.12);
-}
-
-.hover-shadow-xl {
-  transition: box-shadow $transition-duration;
-  &:hover {
-    box-shadow: 0px 6px 6px hsla(0, 0%, 0%, 0.12), 0px 10px 12px hsla(0, 0%, 0%, 0.12);
+  .text-shadow-#{$name} {
+    text-shadow: #{$value};
   }
-}
-
-.hover-shadow-xl-inset {
-  transition: box-shadow $transition-duration;
-  &:hover {
-    box-shadow: inset 0px 6px 6px hsla(0, 0%, 0%, 0.12), inset 0px 10px 12px hsla(0, 0%, 0%, 0.12);
+  .shadow-inset-#{$name} {
+    box-shadow: inset #{$value};
   }
-}
-
-.text-shadow {
-  text-shadow: 0px 0px 1px hsla(0, 0, 0, 0.2), 0px 0px 1px hsla(0, 0, 0, 0.2);
-}
-.text-shadow-sm {
-  text-shadow: 1px 1px 3px hsla(0, 0, 0, 0.2);
-}
-.text-shadow-md {
-  text-shadow: 0px 1px 2px hsla(0, 0, 0, 0.2), 1px 2px 4px hsla(0, 0, 0, 0.2);
-}
-.text-shadow-lg {
-  text-shadow: 3px 3px 6px hsla(0, 0, 0, 0.2), 0 0 5px hsla(0, 0, 0, 0.2);
-}
-.text-shadow-xl {
-  text-shadow: 1px 1px 3px hsla(0, 0, 0, 0.2), 2px 4px 7px hsla(0, 0, 0, 0.2);
-}
-.text-shadow-none {
-  text-shadow: none;
+  .hover-shadow-#{$name} {
+    transition: box-shadow $transition-duration;
+    &:hover {
+      box-shadow: #{$value};
+    }
+  }
 }

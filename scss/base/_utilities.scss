@@ -157,31 +157,19 @@
     z-index: $size;
   }
 }
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $size in $rounded-border {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}#{$name} {
+        border-radius: $size;
+      }
+    }
+  }
+}
 
 .object-cover {
   object-fit: cover;
 }
-
-.rounded-0 {
-  border-radius: 0;
-}
-
-.rounded-sm {
-  border-radius: $rounded-border-radius-sm;
-}
-
-.rounded {
-  border-radius: $rounded-border-radius-md;
-}
-
-.rounded-lg {
-  border-radius: $rounded-border-radius-lg;
-}
-
-.rounded-circle {
-  border-radius: $rounded-border-radius-circle;
-}
-
 .hover-scale {
   transition: all 0.25s;
   &:hover {

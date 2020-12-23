@@ -267,6 +267,14 @@ $rounded-border-radius-md: 0.25rem;
 $rounded-border-radius-lg: 0.5rem;
 $rounded-border-radius-circle: 99rem;
 
+$rounded-border: (
+  "rounded-0": 0,
+  "rounded-sm": $rounded-border-radius-sm,
+  "rounded": $rounded-border-radius-md,
+  "rounded-lg": $rounded-border-radius-lg,
+  "rounded-circle": $rounded-border-radius-circle,
+);
+
 $transition-duration: 0.25s;
 
 $opacity: (
