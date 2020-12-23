@@ -50,3 +50,38 @@ input:checked + .slider:before {
 .max-w-60ch {
   max-width: 60ch;
 }
+
+.accordion {
+  input[name="accordion-input"] {
+    display: none;
+    ~ label {
+      cursor: pointer;
+      user-select: none;
+      &:after {
+        content: "+";
+        color: $grey-400;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: $spacing-2;
+        font-size: $text-xl;
+      }
+    }
+    ~ .accordion-content {
+      display: none;
+    }
+  }
+
+  input[name="accordion-input"]:checked {
+    ~ label {
+      &:after {
+        content: "-";
+        font-size: $text-2xl;
+      }
+    }
+    ~ .accordion-content {
+      display: block;
+    }
+  }
+}
