@@ -1,6 +1,5 @@
 // component.tsx
-exports.component = (componentName) => `import React from 'react';
-export interface I${componentName}Props {}
+exports.component = (componentName) => `export interface I${componentName}Props {}
 
 const ${componentName} = ({}: I${componentName}Props) => {
   return (
