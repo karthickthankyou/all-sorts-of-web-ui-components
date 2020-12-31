@@ -35,10 +35,11 @@ $lh-7: 7rem;
 $lh-8: 8rem;
 $lh-9: 9rem;
 
-$text-sizes: "text-xs" $text-xs lh-1, "text-sm" $text-sm lh-1, "text-base" $text-base lh-1_5, "text-lg" $text-lg lh-1_5,
-  "text-xl" $text-xl lh-1_5, "text-2xl" $text-2xl $lh-font-size, "text-3xl" $text-3xl $lh-font-size,
-  "text-4xl" $text-4xl $lh-font-size, "text-5xl" $text-5xl $lh-font-size, "text-6xl" $text-6xl $lh-font-size,
-  "text-7xl" $text-7xl $lh-font-size, "text-8xl" $text-8xl $lh-font-size, "text-9xl" $text-9xl $lh-font-size;
+$text-sizes: "text-xs" $text-xs $lh-1, "text-sm" $text-sm $lh-1, "text-base" $text-base $lh-1_5,
+  "text-lg" $text-lg $lh-1_5, "text-xl" $text-xl $lh-1_5, "text-2xl" $text-2xl $lh-font-size,
+  "text-3xl" $text-3xl $lh-font-size, "text-4xl" $text-4xl $lh-font-size, "text-5xl" $text-5xl $lh-font-size,
+  "text-6xl" $text-6xl $lh-font-size, "text-7xl" $text-7xl $lh-font-size, "text-8xl" $text-8xl $lh-font-size,
+  "text-9xl" $text-9xl $lh-font-size;
 
 $line-heights: (
   "lh-font-size": $lh-font-size,
